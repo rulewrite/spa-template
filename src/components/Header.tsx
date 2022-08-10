@@ -1,7 +1,14 @@
-import { AppBar, Link, Toolbar, Typography } from '@mui/material';
+import NotificationsIcon from '@mui/icons-material/Notifications';
+import {
+  AppBar,
+  Badge,
+  IconButton,
+  Link,
+  Toolbar,
+  Typography,
+} from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
 import { routes } from '../Routes';
-
 const links = routes.filter(({ label }) => label !== null);
 
 export default () => {
@@ -28,6 +35,12 @@ export default () => {
             );
           })}
         </nav>
+
+        <IconButton color="inherit">
+          <Badge badgeContent={4} color="secondary">
+            <NotificationsIcon />
+          </Badge>
+        </IconButton>
       </Toolbar>
     </AppBar>
   );
