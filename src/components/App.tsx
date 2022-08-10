@@ -1,3 +1,4 @@
+import { Button } from '@mui/material';
 import { Link } from 'react-router-dom';
 
 export default () => {
@@ -5,7 +6,9 @@ export default () => {
     <div>
       hello App
       <br />
-      <Link to="/b">Go to B</Link>
+      <Button component={Link} to="/b" variant="contained">
+        Go to B
+      </Button>
     </div>
   );
 };
