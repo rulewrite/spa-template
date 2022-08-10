@@ -1,20 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import App from './components/App';
-import Bpage from './components/Bpage';
+import { BrowserRouter } from 'react-router-dom';
 import './index.css';
 import Mui from './Mui';
+import Routes from './Routes';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <Mui>
-      header
       <BrowserRouter>
-        <Routes>
-          <Route path="/b" element={<Bpage />}></Route>
-          <Route path="/" element={<App />}></Route>
-        </Routes>
+        header
+        <Routes />
       </BrowserRouter>
     </Mui>
   </React.StrictMode>
