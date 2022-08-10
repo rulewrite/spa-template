@@ -2,7 +2,15 @@ import { ThemeProvider } from '@emotion/react';
 import { createTheme, CssBaseline } from '@mui/material';
 import { ReactNode } from 'react';
 
-const theme = createTheme({});
+const theme = createTheme({
+  components: {
+    MuiLink: {
+      defaultProps: {
+        underline: 'hover',
+      },
+    },
+  },
+});
 
 export default ({ children }: { children: ReactNode }) => {
   return (
