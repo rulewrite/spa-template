@@ -1,17 +1,19 @@
+import { CssBaseline, ThemeProvider } from '@mui/material';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import Header from './components/Header';
-import Mui from './Mui';
 import Routes from './Routes';
+import theme from './theme';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <Mui>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
       <BrowserRouter>
         <Header />
         <Routes />
       </BrowserRouter>
-    </Mui>
+    </ThemeProvider>
   </React.StrictMode>
 );
