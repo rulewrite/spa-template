@@ -8,7 +8,8 @@ import {
   Typography,
 } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
-import { routes } from '../Routes';
+import { routes } from './Routes';
+
 const links = routes.filter(({ label }) => label !== null);
 
 export default () => {

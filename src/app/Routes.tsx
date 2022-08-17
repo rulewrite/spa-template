@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
-import Bpage from './components/Bpage';
-import Home from './components/Home';
+import Bpage from '../components/Bpage';
+import Home from '../components/Home';
 
 export const routes = [
   {
