@@ -1,3 +1,8 @@
+import { useRecoilValue } from 'recoil';
+import countState from '../state/count';
+
 export default () => {
-  return <div>hello Bpage</div>;
+  const count = useRecoilValue(countState);
+
+  return <div>hello Bpage {count}</div>;
 };

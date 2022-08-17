@@ -8,16 +8,20 @@ import {
   Typography,
 } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
+import { useRecoilValue } from 'recoil';
+import countState from '../state/count';
 import { routes } from './Routes';
 
 const links = routes.filter(({ label }) => label !== null);
 
 export default () => {
+  const count = useRecoilValue(countState);
+
   return (
     <AppBar position="sticky" elevation={0}>
       <Toolbar>
         <Typography variant="h6" noWrap sx={{ flexGrow: 1 }}>
-          App
+          App {count}
         </Typography>
 
         <nav>
