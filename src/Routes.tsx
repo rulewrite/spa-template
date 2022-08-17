@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
-import App from './components/App';
 import Bpage from './components/Bpage';
+import Home from './components/Home';
 
 export const routes = [
   {
@@ -10,7 +10,7 @@ export const routes = [
   },
   {
     path: '/',
-    Component: App,
+    Component: Home,
     label: null,
   },
 ];
